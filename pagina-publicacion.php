@@ -27,19 +27,25 @@
 					<nav>
 						<ul class="pagination">
 							<li class="page-item">
-								<a class="page-link" href="https://cecarvirtual.cecar.edu.co/">CECAR VIRTUAL</a>
+								<a class="page-link" href="#">Previous</a>
 							</li>
 							<li class="page-item">
-								<a class="page-link" href="https://aldea.cecar.edu.co/Login">ALDEA</a>
+								<a class="page-link" href="#">1</a>
 							</li>
 							<li class="page-item">
-								<a class="page-link" href="https://www.cecar.edu.co/graduados">GRADUDADOS</a>
+								<a class="page-link" href="#">2</a>
 							</li>
 							<li class="page-item">
-								<a class="page-link" href="https://www.cecar.edu.co/punto-bvc">PUNTO BVC</a>
+								<a class="page-link" href="#">3</a>
 							</li>
 							<li class="page-item">
-								<a class="page-link" href="https://www.cecar.edu.co/icfes-saber-pro">SABER PRO</a>
+								<a class="page-link" href="#">4</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">5</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">Next</a>
 							</li>
 						</ul>
 					</nav>
