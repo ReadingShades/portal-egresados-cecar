@@ -6,12 +6,21 @@ require_once("connectvars.php");
     // Connect to the database
     $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     // 
-    $name = mysqli_escape_string($dbc,trim($_POST['name']));
-    $score = mysqli_escape_string($dbc,trim($_POST['score']));
-    $screenshot = mysqli_escape_string($dbc,trim($_POST['screenshot']));
+    $id = mysqli_escape_string($dbc,trim($_POST['identificador']));
+    $tipoid = mysqli_escape_string($dbc,trim($_POST['tipoidentif']));
+    $nombre = mysqli_escape_string($dbc,trim($_POST['nombre']));
+    $apel = mysqli_escape_string($dbc,trim($_POST['apel']));
+    $password = mysqli_escape_string($dbc,trim($_POST['password']));
+    $email = mysqli_escape_string($dbc,trim($_POST['email']));
+    $tuser = mysqli_escape_string($dbc,trim($_POST['tipouser']));
+
+
     
 
-    mysqli_close($dbc);
+    
+    if (isset($_POST['submit'])) {
+        mysqli_close($dbc);
+    }
 }
 ?>
 <form enctype="multipart/form-data" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
