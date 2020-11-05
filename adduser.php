@@ -14,13 +14,19 @@ require_once("connectvars.php");
     $email = mysqli_escape_string($dbc,trim($_POST['email']));
     $tuser = mysqli_escape_string($dbc,trim($_POST['tipouser']));
 
-
-    
-
-    
     if (isset($_POST['submit'])) {
-        mysqli_close($dbc);
+        $query = "INSERT INTO usuario (uID, uID_tipo, Nombre, Apellido, Password, email, TipoUser) 
+        VALUES (
+            '$id',
+            '$tipoid',
+            '$nombre',
+            '$apel',
+            '$password',
+            '$email',
+            '$tuser')";
+        mysqli_query($dbc, $query) or die ("Error procesing query.");    
     }
+    mysqli_close($dbc);
 }
 ?>
 <form enctype="multipart/form-data" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
