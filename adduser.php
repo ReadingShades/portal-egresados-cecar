@@ -1,9 +1,5 @@
 <?php
-
-if (isset($_POST['submit'])) {
-require_once("connectvars.php");
-
-    // Connect to the database
+include_once("./connectvars.php");
     $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     // 
     $id = mysqli_escape_string($dbc,trim($_POST['identificador']));
@@ -13,30 +9,24 @@ require_once("connectvars.php");
     $password = mysqli_escape_string($dbc,trim($_POST['password']));
     $email = mysqli_escape_string($dbc,trim($_POST['email']));
     $tuser = mysqli_escape_string($dbc,trim($_POST['tipouser']));
-
-    if (isset($_POST['submit'])) {
-        $query = "INSERT INTO usuario (uID, uID_tipo, Nombre, Apellido, Password, email, TipoUser) 
-        VALUES (
-            '$id',
-            '$tipoid',
-            '$nombre',
-            '$apel',
-            '$password',
-            '$email',
-            '$tuser')";
-        mysqli_query($dbc, $query) or die ("Error procesing query.");    
-    }
     mysqli_close($dbc);
-}
 ?>
-<form enctype="multipart/form-data" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" value="<?php if (!empty($name)) echo $name; ?>" /><br />
-    <label for="score">Score:</label>
-    <input type="text" id="score" name="score" value="<?php if (!empty($score)) echo $score; ?>" /><br />
-    <label for="screenshot">Screen shot:</label>
-    <input type="file" id="screenshot" name="screenshot" />
-    <hr />
-    <input type="submit" value="Add" name="submit" />
-  </form>
+<form enctype="multipart/form-data" method="post" action="insertUserDB.php">
+    <h3>¿esta seguro que desea guardar esta informacion?</h3>
+    <br>
+    <p>Id:<?=$id;?></p>
+    <p>Tipo (ID):<?=$tipoid;?></p>
+    <p>Nombre:<?=$nombre;?></p>
+    <p>Apellido:<?=$apel;?></p>
+    <p>Contraseña:<?=$password;?></p>
+    <p>correo institucional:<?=$email;?></p>
+    <p>tipo de usuario:<?=$tuser;?></p>
+    <input type="hidden" name="identificador" value="<?=$id;?>">   
+    <input type="hidden" name="tipoidentif" value="<?=$tipoid;?>">
+    <input type="hidden" name="nombre" value="<?=$nombre;?>">
+    <input type="hidden" name="apel" value="<?=$apel;?>">
+    <input type="hidden" name="password" value=<?=$password;?>">
+    <input type="hidden" name="email" value=<?=$email;?>">
+    <input type="hidden" name="tipouser" value="<?=$tuser;?>">
+    <input type="submit" value="Guardar">
+</form>
