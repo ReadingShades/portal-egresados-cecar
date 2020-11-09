@@ -17,5 +17,9 @@ require_once("connectvars.php");
     echo $query;
     $result = mysqli_query($dbc, $query);    
     mysqli_close($dbc);
+
+    echo "Creacion de nuevo usuario exitoso.";
+}else{
+    echo "Error.";
 }
 ?>
