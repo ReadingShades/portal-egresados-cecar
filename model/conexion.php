@@ -1,7 +1,7 @@
 <?php
 
    // require_once $_SERVER['DOCUMENT_ROOT'] . './Model/connectvars.php';
-    require_once('./Model/connectvars.php');
+    require_once('./model/connectvars.php');
     class Conectar_Databases{
 
         private $hostname = DB_HOST;
