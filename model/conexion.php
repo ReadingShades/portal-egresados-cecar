@@ -19,18 +19,14 @@
                 );
 
                 $this-> conexion = new PDO('mysql:host='. $this-> hostname .'; dbname='.$this->database,
-                                            $this-> user, $this-> password, $opciones);
-                
+                $this-> user, $this-> password, $opciones);
                 $this-> conexion-> exec('SET NAME'. $this->charset . '');
                 
                 echo 'Conexión Exitosa';
             }catch (PDOException $error){
-                echo "! ERROR: ¡ " . $error-> getMenssage();
+                echo "! ERROR: ¡ " . $error-> getMessage();
                 die();
             }
-
             return $this-> conexion;
         }
     }
-
-?>
