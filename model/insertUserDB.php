@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST)) {
-require_once("connectvars.php");
+require_once("./connectvars.php");
     // Connect to the database
     $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     // 

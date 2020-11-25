@@ -1,7 +1,9 @@
+<?php include_once("./views/header.view.php"); ?>
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<form action="adduser.php" method="post">
+<form action="./model/adduser.php" method="post">
   <div class="form-group row">
     <label for="identificador" class="col-4 col-form-label">ID</label> 
     <div class="col-8">
@@ -68,3 +70,5 @@
     </div>
   </div>
 </form>
+
+<?php include_once("./views/footer.view.php"); ?>
