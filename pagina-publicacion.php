@@ -68,7 +68,7 @@ include_once("./views/header.view.php");
 				</div>
 				<div class="form-group row">
 					<div class="offset-4 col-8">
-						<button type="submit" class="btn btn-primary">Guardar</button>
+						<button type="submit" class="btn btn-secondary">Guardar</button>
 					</div>
 				</div>
 			</form>
