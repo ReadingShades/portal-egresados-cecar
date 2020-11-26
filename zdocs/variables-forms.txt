@@ -1,0 +1,12 @@
+// Usuario
+user-id                 - identificador principal
+user-id-type            - tipo de documento identificador
+nombre                  - nombre de usuario
+apel                    - apellido de usuario
+email                   - email de usuario
+docente vs admin,etc.   - tipouser
+
+//publicacion
+Titulo de post          - publicacionTitulo
+oferta vs noticia,etc   - publicacionTipo
+contenido post          - publicacionCuerpo

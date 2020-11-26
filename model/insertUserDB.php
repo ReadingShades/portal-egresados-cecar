@@ -5,8 +5,8 @@ require_once("./connectvars.php");
     // Connect to the database
     $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     // 
-    $id = mysqli_escape_string($dbc,trim($_POST['identificador']));
-    $tipoid = mysqli_escape_string($dbc,trim($_POST['tipoidentif']));
+    $id = mysqli_escape_string($dbc,trim($_POST['user-id']));
+    $tipoid = mysqli_escape_string($dbc,trim($_POST['user-id-type']));
     $nombre = mysqli_escape_string($dbc,trim($_POST['nombre']));
     $apel = mysqli_escape_string($dbc,trim($_POST['apel']));
     $password = mysqli_escape_string($dbc,trim($_POST['password']));

@@ -26,8 +26,8 @@ require_once("./connectvars.php");
     // Connect to the database
     $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     // 
-    $UserID = mysqli_escape_string($dbc,trim($_POST['usuarioID']));
-    $UserName = mysqli_escape_string($dbc,trim($_POST['usuarioNombre']));
+    $UserID = mysqli_escape_string($dbc,trim($_POST['user-id']));
+    $UserName = mysqli_escape_string($dbc,trim($_POST['Nombre']));
     $pubTitulo = mysqli_escape_string($dbc,trim($_POST['publicacionTitulo']));
     $pubTipo = mysqli_escape_string($dbc,trim($_POST['publicacionTipo']));
     $pubContent = mysqli_escape_string($dbc,trim($_POST['publicacionCuerpo']));
