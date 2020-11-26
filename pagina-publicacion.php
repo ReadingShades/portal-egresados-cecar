@@ -22,7 +22,7 @@ include_once("./views/header.view.php");
 				<div class="form-group row">
 					<label for="usuarioID" class="col-4 col-form-label">Documento de identificación</label>
 					<div class="col-8">
-						<input id="usuarioID" name="usuarioID" type="text" class="form-control" required="required">
+						<input id="usuarioID" name="user-id" type="text" class="form-control" required="required">
 					</div>
 				</div>
 				<div class="form-group row">
@@ -34,7 +34,7 @@ include_once("./views/header.view.php");
 									<i class="fa fa-address-card"></i>
 								</div>
 							</div>
-							<input id="usuarioNombre" name="usuarioNombre" type="text" class="form-control" required="required">
+							<input id="usuarioNombre" name="nombre" type="text" class="form-control" required="required">
 						</div>
 					</div>
 				</div>

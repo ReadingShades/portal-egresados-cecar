@@ -10,13 +10,13 @@ include_once("./views/header.view.php");
   <div class="form-group row">
     <label for="identificador" class="col-4 col-form-label">ID</label> 
     <div class="col-8">
-      <input required id="identificador" name="identificador" type="text" class="form-control">
+      <input required id="identificador" name="user-id" type="text" class="form-control">
     </div>
   </div>
   <div class="form-group row">
     <label for="tipoidentif" class="col-4 col-form-label">Tipo de documento</label> 
     <div class="col-8">
-      <input required id="tipoidentif" name="tipoidentif" type="text" class="form-control">
+      <input required id="tipoidentif" name="user-id-type" type="text" class="form-control">
     </div>
   </div>
   <div class="form-group row">
