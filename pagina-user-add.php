@@ -28,14 +28,14 @@ include_once("./views/header.view.php");
             <i class="fa fa-address-card"></i>
           </div>
         </div> 
-        <input required id="nombre" name="nombre" type="text" class="form-control">
+        <input required id="nombre" name="username" type="text" class="form-control">
       </div>
     </div>
   </div>
   <div class="form-group row">
     <label for="apel" class="col-4 col-form-label">Apellido</label> 
     <div class="col-8">
-      <input required id="apel" name="apel" type="text" class="form-control">
+      <input required id="apel" name="user-apel" type="text" class="form-control">
     </div>
   </div>
   <div class="form-group row">

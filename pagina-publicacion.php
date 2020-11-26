@@ -61,6 +61,12 @@ include_once("./views/header.view.php");
 					</div>
 				</div>
 				<div class="form-group row">
+					<label class="col-4"></label>
+					<div class="col-8">
+						<input type="date" id="pubfechainit" name="pubfechainit" class="form-control"></input>
+					</div>
+				</div>
+				<div class="form-group row">
 					<div class="offset-4 col-8">
 						<button type="submit" class="btn btn-primary">Guardar</button>
 					</div>

@@ -1,8 +1,8 @@
 // Usuario
 user-id                 - identificador principal
 user-id-type            - tipo de documento identificador
-nombre                  - nombre de usuario
-apel                    - apellido de usuario
+username                  - nombre de usuario
+user-apel                    - apellido de usuario
 email                   - email de usuario
 docente vs admin,etc.   - tipouser
 
