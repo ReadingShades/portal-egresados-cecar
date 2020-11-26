@@ -5,13 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Portal de egresados</title>
-
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
+    <title><?=$main_title;?></title>   
 
     <link href="./rsc/css/bootstrap.min.css" rel="stylesheet">
     <link href="./rsc/css/style.css" rel="stylesheet">
 
   </head>
-  <body>
+  <body class="bg-primary text-white">
