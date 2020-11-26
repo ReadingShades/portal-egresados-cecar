@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-3">
-        <img alt="Bootstrap Image Preview" src="./rsc/img/Logo Cecar.jpg">
+        <img src="./rsc/img/Logo Cecar.jpg" alt="" onerror="this.onerror=null; this.src='../rsc/img/Logo Cecar.jpg';" style="display:block; max-width: 200px; max-height: 150px; object-fit: contain;">
     </div>
     <div class="col-md-6">
         <nav>
