@@ -1,41 +1,63 @@
-<div class="row">
-    <div class="col-md-3">
-        <img src="./rsc/img/Logo Cecar.jpg" alt="" onerror="this.onerror=null; this.src='../rsc/img/Logo Cecar.jpg';" style="display:block; max-width: 200px; max-height: 150px; object-fit: contain;">
-    </div>
-    <div class="col-md-6">
-        <nav>
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="https://cecarvirtual.cecar.edu.co/">CECAR VIRTUAL</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="https://aldea.cecar.edu.co/Login">ALDEA</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="https://www.cecar.edu.co/graduados">GRADUDADOS</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="https://www.cecar.edu.co/punto-bvc">PUNTO BVC</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="https://www.cecar.edu.co/icfes-saber-pro">SABER PRO</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div class="col-md-3">
-        <nav>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="#">Home</a>
-                </li>
-                <li class="breadcrumb-item">
-                    <a href="#">Library</a>
-                </li>
-                <li class="breadcrumb-item active">
-                    Data
-                </li>
-            </ol>
-        </nav>
-    </div>
-</div>
+<header>
+        <div class="collapse bg-dark" id="infoescondida">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+
+                        <a class="navbar-brand" href="#">
+                        <img src="./rsc/img/Logo Cecar.jpg" alt="" onerror="this.onerror=null; this.src='../rsc/img/Logo Cecar.jpg';" style="display:block; max-width: 200px; max-height: 150px; object-fit: contain;">
+                        </a>
+
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Reedes Sociales</h4>
+                        <ul class="list-unstyled">
+                            <li class="text-white">
+                                <a class="navbar-brand" href="#">
+                                    <img src="./" width="30" height="30" alt="" loading="lazy">
+                                </a>
+                                <a class="navbar-brand" href="#">
+                                    <img src="./" width="30" height="30" alt="" loading="lazy">
+                                </a>
+                                <a class="navbar-brand" href="#">
+                                    <img src="./" width="30" height="30" alt="" loading="lazy">
+                                </a>
+                                <a class="navbar-brand" href="#">
+                                    <img src="./" width="30" height="30" alt="" loading="lazy">
+                                </a>
+                                <a class="navbar-brand" href="#">
+                                    <img src="./" width="30" height="30" alt="" loading="lazy">
+                                </a>
+                                <a class="navbar-brand" href="#">
+                                    <img src="./" width="30" height="30" alt="" loading="lazy">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--finaliza contenido escondido-->
+
+        <!--Inicio barra de navegación-->
+
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-flex justify-content-between">
+
+                <a href="Index.html" class="navbar-brand d-flex align-items-center">
+                    <strong>Inicio</strong>
+                </a>
+                <a href="Resultados.html" class="navbar-brand d-flex align-items-center">
+                    <strong>Resultados</strong>
+                </a>
+                <a href="Discusion.html" class="navbar-brand d-flex align-items-center">
+                    <strong>Discusión y Análisis</strong>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#infoescondida" aria-controls="infoescondida" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
