@@ -31,8 +31,8 @@ require_once("./connectvars.php");
     $pubTitulo = mysqli_escape_string($dbc,trim($_POST['publicacionTitulo']));
     $pubTipo = mysqli_escape_string($dbc,trim($_POST['publicacionTipo']));
     $pubContent = mysqli_escape_string($dbc,trim($_POST['publicacionCuerpo']));
-    $pubfechaInicio = mysqli_escape_string($dbc,trim($_POST['pubfechaInit']));
-    $pubfechaExpire = mysqli_escape_string($dbc,trim($_POST['pubfechaExp']));
+    $pubfechaInicio = mysqli_escape_string($dbc,trim($_POST['pubFechaInit']));
+    $pubfechaExpire = mysqli_escape_string($dbc,trim($_POST['pubFechaExp']));
     
     $query = "INSERT INTO oferta (ofertaID,userID,Titulo,Contenido,FechaPub,FechaInicio,FechaExp,TipoOferta) VALUES (\"$id\",\"$tipoid\",\"$nombre\",\"$apel\",\"$password\",\"$email\",\"$tuser\")";
     echo $query;

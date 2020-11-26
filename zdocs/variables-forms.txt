@@ -9,4 +9,6 @@ docente vs admin,etc.   - tipouser
 //publicacion
 Titulo de post          - publicacionTitulo
 oferta vs noticia,etc   - publicacionTipo
+fecha publicacion       - pubfechainit
+fecha expiracion       - pubfechaexp
 contenido post          - publicacionCuerpo
