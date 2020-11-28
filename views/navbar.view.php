@@ -24,8 +24,8 @@
         </nav>
     </div>
     <div class="col-md-3">
-        <div class="card bg-dark mb-3">
-            <h4 class="text-white">Contactenos</h4>
+        <div class="card bg-info mb-3">
+            <h4>Contactenos</h4>
             <ul class="list-unstyled">
                 <li class="text-white">
                     <a class="navbar-brand" href="https://www.facebook.com/unicecar/">
