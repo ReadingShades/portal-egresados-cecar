@@ -11,4 +11,4 @@
     <link href="./rsc/css/style.css" rel="stylesheet">
 
   </head>
-  <body class="bg-primary text-white">
+  <body class="bg-success text-white">
