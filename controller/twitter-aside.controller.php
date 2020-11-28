@@ -1,5 +1,5 @@
 <?php
-include_once('twitter-aside.model.php');
+include_once('./model/twitter-aside.model.php');
 $tweets = ['asd', 'ert'];
 foreach ($tweets as $tweet) {
 ?>

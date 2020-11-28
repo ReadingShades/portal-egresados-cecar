@@ -46,8 +46,7 @@ CREATE TABLE `oferta` (
 --
 
 CREATE TABLE `twitter` (
-  `tIDPub` int(11) NOT NULL,
-  `Formato` varchar(15) NOT NULL,
+  `tIDPub` int(11) NOT NULL  AUTO_INCREMENT,  
   `url` varchar(100) NOT NULL,
   `publicado` boolean NOT NULL DEFAULT 0,
   `ofertaID` int(11) NOT NULL
