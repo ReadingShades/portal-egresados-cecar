@@ -29,19 +29,19 @@
             <ul class="list-unstyled">
                 <li class="text-white">
                     <a class="navbar-brand" href="https://www.facebook.com/unicecar/">
-                        <img src="./rsc/img/facebook.png" width="30" height="30" alt="" loading="lazy">
+                        <img src="./rsc/img/facebook.png" alt="" onerror="this.onerror=null; this.src='../rsc/img/facebook.png';" width="30" height="30" loading="lazy">
                     </a>
                     <a class="navbar-brand" href="https://www.instagram.com/unicecar/?hl=es-la">
-                        <img src="./rsc/img/instagram.png" width="30" height="30" alt="" loading="lazy">
+                        <img src="./rsc/img/instagram.png" alt="" onerror="this.onerror=null; this.src='../rsc/img/instagram.png';" width="30" height="30" loading="lazy">
                     </a>
                     <a class="navbar-brand" href="https://twitter.com/cecarvirtual?lang=es">
-                        <img src="./rsc/img/twitter.png" width="30" height="30" alt="" loading="lazy">
+                        <img src="./rsc/img/twitter.png" alt="" onerror="this.onerror=null; this.src='../rsc/img/twitter.png';" width="30" height="30" loading="lazy">
                     </a>
                     <a class="navbar-brand" href="https://www.youtube.com/channel/UCd3dDVx8Os9dKgxF9Fgmelw">
-                        <img src="./rsc/img/youtube.png" width="30" height="30" alt="" loading="lazy">
+                        <img src="./rsc/img/youtube.png" alt="" onerror="this.onerror=null; this.src='../rsc/img/youtube.png';" width="30" height="30" loading="lazy">
                     </a>
                     <a class="navbar-brand" href="#">
-                        <img src="./rsc/img/email.png" width="30" height="30" alt="" loading="lazy">
+                        <img src="./rsc/img/email.png" alt="" onerror="this.onerror=null; this.src='../rsc/img/email.png';" width="30" height="30" loading="lazy">
                     </a>
                 </li>
             </ul>

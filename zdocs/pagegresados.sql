@@ -46,7 +46,7 @@ CREATE TABLE `oferta` (
 --
 
 CREATE TABLE `twitter` (
-  `tIDPub` int(11) NOT NULL  AUTO_INCREMENT,  
+  `tIDPub` int(11) NOT NULL,  
   `url` varchar(100) NOT NULL,
   `publicado` boolean NOT NULL DEFAULT 0,
   `ofertaID` int(11) NOT NULL
@@ -68,13 +68,6 @@ CREATE TABLE `usuario` (
   `userID-tipo` char(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `usuario`
---
-
-INSERT INTO `usuario` (`Nombre`, `Apellido`, `Password`, `email`, `TipoUser`, `userID`, `userID-tipo`) VALUES
-('Carlos', 'Ramirez', 'fdasfsfasd\"', 'carlos.ramirezm@cecar.edu.co\"', 'egresado', 111223, 'c'),
-('Carlos Andres', 'Muï¿½iz', 'qewq\"', 'carlos.ramirezm@cecar.edu.co\"', 'egresado', 1112232, 'cc');
 
 --
 -- Indexes for dumped tables
@@ -84,14 +77,14 @@ INSERT INTO `usuario` (`Nombre`, `Apellido`, `Password`, `email`, `TipoUser`, `u
 -- Indexes for table `oferta`
 --
 ALTER TABLE `oferta`
-  ADD PRIMARY KEY (`ofertaID`),
+  MODIFY `ofertaID` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,  
   ADD KEY `userID` (`userID`);
 
 --
 -- Indexes for table `twitter`
 --
 ALTER TABLE `twitter`
-  ADD PRIMARY KEY (`tIDPub`),
+  MODIFY `tIDPub` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,  
   ADD KEY `ofertaID` (`ofertaID`);
 
 --
