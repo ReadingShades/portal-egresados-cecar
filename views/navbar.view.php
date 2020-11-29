@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-3">
-        <img class="img-fluid" style="max-height: 30%;" src="./rsc/img/Logo Cecar.jpg" alt="" onerror="this.onerror=null; this.src='../rsc/img/Logo Cecar.jpg';" style="display:block; max-width: 200px; max-height: 150px; object-fit: contain;">
+        <img class="img-fluid" style="max-height: 30%;" src="./rsc/img/logo-cecar.jpg" alt="" onerror="this.onerror=null; this.src='../rsc/img/logo-cecar.jpg';" style="display:block; max-width: 200px; max-height: 150px; object-fit: contain;">
     </div>
     <div class="col-md-6">
         <nav>
