@@ -1,6 +1,6 @@
 <?php
 $main_title = "Formulario - Inscripcion";
-include_once("../views/header.view.php");
+include_once("../views/header-deep.view.php");
 ?>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -88,4 +88,4 @@ include_once("../views/header.view.php");
   </div>
 </div>
 
-<?php include_once("../views/footer.view.php"); ?>
+<?php include_once("../views/footer-deep.view.php"); ?>
