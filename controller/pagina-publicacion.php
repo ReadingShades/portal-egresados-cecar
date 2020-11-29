@@ -29,15 +29,7 @@ include_once("../views/header.view.php");
 					<div class="col-8">
 						<input id="usuarioID" name="user-id" type="text" class="form-control" required="required">
 					</div>
-				</div>
-				<div class="form-group row">
-					<label for="usuarioNombre" class="col-4 col-form-label">Autor</label>
-					<div class="col-8">
-						<div class="input-group">							
-							<input id="usuarioNombre" name="nombre" type="text" class="form-control" required="required">
-						</div>
-					</div>
-				</div>
+				</div>				
 				<div class="form-group row">
 					<label for="publicacionTitulo" class="col-4 col-form-label">Titulo de publicacion</label>
 					<div class="col-8">
@@ -55,7 +47,7 @@ include_once("../views/header.view.php");
 					</div>
 				</div>
 				<div class="form-group row">
-					<label class="col-4">Fecha de publicacion</label>
+					<label class="col-4">Fecha de Inicio</label>
 					<div class="col-8">
 						<input type="date" min="<?php echo date('Y-m-d');?>" value="<?php echo date('Y-m-d');?>" max="" id="pubFechaInit" name="pubFechaInit" class="form-control"></input>
 					</div>

@@ -3,7 +3,7 @@ require_once('../model/connectvars.php');
 // Connect to the database
 $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 // Retrieve the score data from MySQL
-$query = "SELECT * FROM `twitter` JOIN `oferta` ON twitter.ofertaID = oferta.OfertaID JOIN `usuario` ON usuario.userID = oferta.userID ORDER BY FechaPub DESC";
+$query = "SELECT * FROM `twitter` JOIN `oferta` ON twitter.ofertaID = oferta.OfertaID JOIN `usuario` ON usuario.userID = oferta.userID ORDER BY FechaPub DESC, FechaExp ASC";
 $data = mysqli_query($dbc, $query)  or die(mysqli_error($dbc));
 
 $main_title = "Administracion de twitter/post";
