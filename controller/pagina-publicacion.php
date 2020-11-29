@@ -15,7 +15,7 @@ include_once("../views/header-deep.view.php");
 			<!-- TODO: Banner-->
 		</div>
 		<div class="col-md-12">
-			<!-- TODO: localnavbar-->
+			<?php include_once("../views/local-navbar-deep.view.php"); ?>
 		</div>
 		<div class="col-md-12">
 			<br>
