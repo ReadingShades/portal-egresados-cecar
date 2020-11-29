@@ -1,9 +1,6 @@
-<?php
-print_r($_POST);
-?>
+<h1>Resumen de publicacion</h1>
 <table>
     <?php
-
 
     foreach ($_POST as $key => $value) {
         echo "<tr>";
@@ -16,10 +13,9 @@ print_r($_POST);
         echo "</tr>";
     }
 
-
     ?>
 </table>
-
+<br>
 <?php
 if (isset($_POST)) {
     require_once("./connectvars.php");
@@ -36,13 +32,20 @@ if (isset($_POST)) {
 
     $query = "INSERT INTO `oferta` (`ofertaID`, `userID`, `Titulo`, `Contenido`, `FechaPub`, `FechaInicio`, `FechaExp`, `TipoOferta`) 
     VALUES (NULL, '$UserID','$pubTitulo','$pubContent','$pubFechapub','$pubfechaInicio','$pubfechaExpire','$pubTipo')";
-    echo "\n".$query.PHP_EOL;
+    
     $result = mysqli_query($dbc, $query) or die(mysqli_error($dbc));
-    echo $result;
     mysqli_close($dbc);
 
-    echo "\n Creacion de publicacion exitoso.";
+    if($result == 1){
+        echo "\n Creacion de publicacion exitoso.";
+    }else{
+        echo $result;
+    }
+    ?>
+    <br><br><br>
+    <a href="../index.php">Volver al inicio</a>
+    <?php
 } else {
-    echo "Error.";
+    echo "No se ha proporcionado la informacion necesaria para esta accion.";
 }
 ?>
