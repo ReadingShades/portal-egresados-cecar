@@ -14,7 +14,7 @@ require_once("./connectvars.php");
     $email = preg_replace('/"/i', '', $_POST['email']);
     $tuser = $_POST['tipouser'];
 
-    $query = "INSERT INTO `usuario` (`Nombre`, `Apellido`, `Password`, `email`, `TipoUser`, `userID`, `userID-tipo`) VALUES ('$UserName', '$UserApel', '$password', '$email', '$tuser', '$UserID', '$tipoid')";    
+    $query = "INSERT INTO `usuario` (`Nombre`, `Apellido`, `Password`, `email`, `TipoUser`, `userID`, `userID-tipo`) VALUES ('$UserName', '$UserApel', SHA('$password'), '$email', '$tuser', '$UserID', '$tipoid')";    
     $result = mysqli_query($dbc, $query); 
     mysqli_close($dbc);
 

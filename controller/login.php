@@ -4,7 +4,7 @@ session_start();
 // Clear the error message
 $error_msg = "";
 // If the user isn't logged in, try to log them in
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user-id'])) {
     if (isset($_POST['submit'])) {
         // Connect to the database
         $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
@@ -20,10 +20,11 @@ if (!isset($_SESSION['user_id'])) {
             if (mysqli_num_rows($data) == 1) {
                 // The log-in is OK so set the user ID and username cookies, and redirect to the home page
                 $row = mysqli_fetch_array($data);
-                $_SESSION['user_id'] = $row['user_id'];
+                $_SESSION['user-id'] = $row['user-id'];
                 $_SESSION['username'] = $row['username'];
-                setcookie('user_id', $row['user_id'], time() + (60 * 60 * 24 * 30)); // expires in 30 days 
+                setcookie('user-id', $row['user-id'], time() + (60 * 60 * 24 * 30)); // expires in 30 days 
                 setcookie('username', $row['username'], time() + (60 * 60 * 24 * 30)); // expires in 30 days
+                setcookie('tipouser', $row['tipouser'], time() + (60 * 60 * 24 * 30)); // expires in 30 days
                 $home_url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/index.php';
                 header('Location: ' . $home_url);
             } else {
@@ -37,36 +38,37 @@ if (!isset($_SESSION['user_id'])) {
     }
 }
 ?>
-<html>
 
-<head>
-    <title>Mismatch - Log In</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
+<?php
+$main_title = "Inicio de sesion";
+require_once('../views/header-deep.view.php');
+?>
 
 <body>
-    <h3>Ingresar a Portal</h3>
+    <h3>Ingresar al Portal</h3>
     <?php
     // If the cookie is empty, show any error message and the log-in form; otherwise confirm the log-in
-    if (empty($_SESSION['user_id'])) {
+    if (empty($_SESSION['user-id'])) {
         echo '<p class="error">' . $error_msg . '</p>';
     ?>
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-            <fieldset>
-                <legend>Log In</legend>
-                <label for="username">ID:</label>
-                <input type="text" id="username" name="username" value="<?php if (!empty($user_username)) echo $user_username; ?>" /><br />
-                <label for="password">Clave:</label>
-                <input type="password" id="password" name="password" />
-            </fieldset>
-            <input type="submit" value="Log In" name="submit" />
-        </form>
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                    <fieldset>
+                        <legend>Log In</legend>
+                        <label for="username">ID:</label>
+                        <input type="text" id="username" name="username" value="<?php if (!empty($user_username)) echo $user_username; ?>" /><br />
+                        <label for="password">Clave:</label>
+                        <input type="password" id="password" name="password" />
+                    </fieldset>
+                    <input type="submit" value="Log In" name="submit" />
+                </form>
+            </div>
+        </div>
     <?php
     } else {
         // Confirm the successful log in
         echo ('<p class="login">You are logged in as ' . $_SESSION['username'] . '.</p>');
     }
+    require_once('../views/footer-deep.view.php');
     ?>
-</body>
-
-</html>
