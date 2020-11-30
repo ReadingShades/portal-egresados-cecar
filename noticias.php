@@ -1,5 +1,5 @@
 <?php
-$main_title = "Bolsa de empleos";
+$main_title = "Noticias";
 include_once("./views/header.view.php");
 ?>
 
@@ -11,7 +11,7 @@ include_once("./views/header.view.php");
             <div class="row bg-info">
                 <?php include_once('./views/aside.view.php'); ?>                
                 <?php 
-                $tipo_consulta = "trabajo";
+                $tipo_consulta = "noticia";
                 include_once('./views/content-filler.view.php'); 
                 ?>
             </div>
