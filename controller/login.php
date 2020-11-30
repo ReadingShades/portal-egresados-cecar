@@ -1,5 +1,5 @@
 <?php
-require_once('connectvars.php');
+require_once('../model/connectvars.php');
 session_start();
 // Clear the error message
 $error_msg = "";
@@ -11,10 +11,11 @@ if (!isset($_SESSION['user_id'])) {
         // Grab the user-entered log-in data
         $user_username = mysqli_real_escape_string($dbc, trim($_POST['username']));
         $user_password = mysqli_real_escape_string($dbc, trim($_POST['password']));
+        $user_password = preg_replace('/"/i', '', $user_password);
         if (!empty($user_username) && !empty($user_password)) {
             // Look up the username and password in the database
-            $query = "SELECT user_id, username FROM mismatch_user WHERE username = '$user_username' AND " .
-                "password = SHA('$user_password')";
+            $query = "SELECT userID, username FROM usuario WHERE username = '$user_username' AND " .
+                "password = '$user_password'";
             $data = mysqli_query($dbc, $query);
             if (mysqli_num_rows($data) == 1) {
                 // The log-in is OK so set the user ID and username cookies, and redirect to the home page
@@ -27,11 +28,11 @@ if (!isset($_SESSION['user_id'])) {
                 header('Location: ' . $home_url);
             } else {
                 // The username/password are incorrect so set an error message
-                $error_msg = 'Sorry, you must enter a valid username and password to log in.';
+                $error_msg = 'Error, debes ingresar un usuario y contraseña valido';
             }
         } else {
             // The username/password weren't entered so set an error message
-            $error_msg = 'Sorry, you must enter your username and password to log in.';
+            $error_msg = 'Error, debes digitar un usuario y contraseña.';
         }
     }
 }
@@ -44,7 +45,7 @@ if (!isset($_SESSION['user_id'])) {
 </head>
 
 <body>
-    <h3>Mismatch - Log In</h3>
+    <h3>Ingresar a Portal</h3>
     <?php
     // If the cookie is empty, show any error message and the log-in form; otherwise confirm the log-in
     if (empty($_SESSION['user_id'])) {
@@ -53,9 +54,9 @@ if (!isset($_SESSION['user_id'])) {
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <fieldset>
                 <legend>Log In</legend>
-                <label for="username">Username:</label>
+                <label for="username">ID:</label>
                 <input type="text" id="username" name="username" value="<?php if (!empty($user_username)) echo $user_username; ?>" /><br />
-                <label for="password">Password:</label>
+                <label for="password">Clave:</label>
                 <input type="password" id="password" name="password" />
             </fieldset>
             <input type="submit" value="Log In" name="submit" />
