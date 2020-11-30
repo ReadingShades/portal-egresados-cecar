@@ -7,6 +7,7 @@ include_once("./views/header.view.php");
     <div class="row">
         <div class="col-md-12">
             <?php include_once('./views/navbar.view.php'); ?>
+            <!-- <?php include_once('./views/local-navbar.view.php'); ?> -->
             <div class="row">
                 <?php include_once('./views/aside.view.php'); ?>
                 <?php include_once('./views/menu-index.view.php'); ?>

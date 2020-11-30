@@ -11,7 +11,12 @@ $data = mysqli_fetch_array($result);
 
 print_r($data);
 
-mysqli_close($dbc);
+
+/* $query = "UPDATE `twitter` SET `publicado` = '1', `url` = `$url` WHERE tIDPub = $tweetID";
+$result = mysqli_query($dbc, $query) or die(mysqli_error($dbc));
+ */
+
+ mysqli_close($dbc);
 
 
 ?>

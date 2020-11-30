@@ -1,24 +1,24 @@
-<?php 
+<?php
 $main_title = "Formulario - Publicacion";
-include_once("../views/header.view.php"); 
+include_once("../views/header-deep.view.php");
 ?>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
 			<?php include_once("../views/navbar.view.php"); ?>
-		</div>		
-		<div class="col-md-12">
-			<!-- TODO: Banner-->			
 		</div>
 		<div class="col-md-12">
-			<!-- TODO: localnavbar-->
+			<!-- TODO: Banner-->
 		</div>
-		<div class="col-md-12">	
-			<br>		
+		<div class="col-md-12">
+			<?php include_once("../views/local-navbar-deep.view.php"); ?>
+		</div>
+		<div class="col-md-12">
+			<br>
 			<h1 class="text-center">Registro de publicaciones</h1>
 			<br>
 		</div>
@@ -28,14 +28,6 @@ include_once("../views/header.view.php");
 					<label for="usuarioID" class="col-4 col-form-label">Documento de identificación</label>
 					<div class="col-8">
 						<input id="usuarioID" name="user-id" type="text" class="form-control" required="required">
-					</div>
-				</div>
-				<div class="form-group row">
-					<label for="usuarioNombre" class="col-4 col-form-label">Autor</label>
-					<div class="col-8">
-						<div class="input-group">							
-							<input id="usuarioNombre" name="nombre" type="text" class="form-control" required="required">
-						</div>
 					</div>
 				</div>
 				<div class="form-group row">
@@ -55,23 +47,23 @@ include_once("../views/header.view.php");
 					</div>
 				</div>
 				<div class="form-group row">
-					<label class="col-4">Fecha de publicacion</label>
+					<label class="col-4">Fecha de Inicio</label>
 					<div class="col-8">
-						<input type="date" min="<?php echo date('Y-m-d');?>" value="<?php echo date('Y-m-d');?>" max="" id="pubFechaInit" name="pubFechaInit" class="form-control"></input>
+						<input type="date" min="<?php echo date('Y-m-d'); ?>" value="<?php echo date('Y-m-d'); ?>" max="" id="pubFechaInit" name="pubFechaInit" class="form-control"></input>
 					</div>
 				</div>
 				<div class="form-group row">
 					<label class="col-4">Fecha de expiracion</label>
 					<div class="col-8">
-						<input type="date" min="<?php echo date('Y-m-d');?>" value="<?php echo date('Y-m-d');?>" max="" id="pubFechaExp" name="pubFechaExp" class="form-control"></input>
+						<input type="date" min="<?php echo date('Y-m-d'); ?>" value="<?php echo date('Y-m-d'); ?>" max="" id="pubFechaExp" name="pubFechaExp" class="form-control"></input>
 					</div>
 				</div>
-				<div class="form-group row">
+				<div class="form-group  row">
 					<label class="col-4">Contenido</label>
-					<div class="col-8">
-						<textarea id="publicacionCuerpo" name="publicacionCuerpo" cols="40" rows="15" class="form-control"></textarea>
+					<div class="summernote col-8">
+						<textarea id="my-summernote" name="publicacionCuerpo" cols="40" rows="15" class="form-control"></textarea>
 					</div>
-				</div>				
+				</div>
 				<div class="form-group row">
 					<div class="offset-4 col-8">
 						<button type="submit" class="btn btn-secondary">Guardar</button>
@@ -82,4 +74,4 @@ include_once("../views/header.view.php");
 	</div>
 </div>
 
-<?php include_once("../views/footer.view.php"); ?>
+<?php include_once("../views/footer-deep.view.php"); ?>

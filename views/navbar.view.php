@@ -12,7 +12,7 @@
                     <a class="page-link" href="https://aldea.cecar.edu.co/Login">ALDEA</a>
                 </li>
                 <li class="page-item">
-                    <a class="page-link" href="https://www.cecar.edu.co/graduados">GRADUDADOS</a>
+                    <a class="page-link" href="https://www.cecar.edu.co/graduados">GRADUADOS</a>
                 </li>
                 <li class="page-item">
                     <a class="page-link" href="https://www.cecar.edu.co/punto-bvc">PUNTO BVC</a>
