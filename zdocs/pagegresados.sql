@@ -36,7 +36,7 @@ INSERT INTO `twitter` (`tIDPub`, `url`, `publicado`, `ofertaID`) VALUES
 CREATE TABLE `usuario` (
   `Nombre` varchar(20) NOT NULL,
   `Apellido` varchar(20) NOT NULL,
-  `Password` varchar(20) NOT NULL,
+  `Password` varchar(50) NOT NULL,
   `email` varchar(60) NOT NULL,
   `TipoUser` varchar(20) NOT NULL,
   `userID` int(15) NOT NULL,

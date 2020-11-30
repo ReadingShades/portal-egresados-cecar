@@ -9,7 +9,7 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    <a class="col-12 text-center btn btn-outline-primary" href="https://www.cecar.edu.co/13-noticias.html">Noticias</a>
+                    <a class="col-12 text-center btn btn-outline-primary" href="./noticias.php">Noticias</a>
                 </div>
             </div>
         </div>
